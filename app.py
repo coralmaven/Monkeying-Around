@@ -185,7 +185,7 @@ def mass_scrape(inputValue):
 
         return jsonify(amazon_data, total_rev_data, monthly_rev_data, etsy_data)
     except:
-        return redirect(url_for('catch'))
+        return render_template("error.html")
 
 @app.route("/error")
 def catch():
